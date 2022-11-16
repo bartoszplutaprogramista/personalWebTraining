@@ -72,12 +72,58 @@
 			<article>
 				<div class="row justify-content-center">
 					<div class="col-xl-12 col-xxl-9 p-0">
-						<div class="content mt-2 p-4">
-							<h2>Aplikacja Budżet Osobisty</h2>
-							<p class="p-content p-2">Budżet Osobisty pozwala na analizę tego jakie mamy przychody np. związane z wynagrodzeniem, stypendium itd. oraz ile pieniędzy wydajemy na poszczególne rzeczy: opłaty związane z mieszkaniem, kredytami, jedzeniem, rozrywką, remontami, wakacjami, ubezpieczeniami. Dzięki tej analizie łatwiej jest nam zaoszczędzić pieniądze na nowy cel. np samochód. </p>
-							
-							<h2 class="mt-2">Jak działa Aplikacja Budżet Osobisty?</h2>
-							<p class="p-content p-2">Mamy do wyboru 4 główne opcje w aplikacji: dodaj przychód (możemy dodać np.: wynagrodzenie, odsetki bankowe, sprzedaż na allegro, inne), dodaj wydatek (możemy dodać: sposób płatności: gotówką, kartą debetową, kartą kredytową w następujących kategoriach: jedzenie, mieszkanie, transport, telekomunikacja, opieka zdrowotna itp.), przeglądaj bilans (tutaj zaprezentowane jest podsumowanie przychodów oraz wydatków w danym okresie dla danych kategorii) oraz ustawienia gdzie możemy zmienić: adres e-mail lub hasło.</p>	
+						<div class="content mt-2 p-4">	
+							<h3>DODAJ WYDATEK</h3>
+							<div class="div-form-buttons mx-auto">
+								<form action="#" method="post">
+									<div class="mb-3">
+										<label for="amountOfExpanse" class="form-label">Kwota (zł):</label>
+										<input type="number" class="form-control" min="0" step="0.01" id="amountOfExpanse" value="1" onkeypress="return onlyNumberKey(event)">
+									</div>
+									<div class="mb-3">
+										<label for="theDate" class="form-label">Data:</label>
+										<input type="date" class="form-control" id="theDate" min="2000-01-01">
+									</div>
+									<label class="p-input-radio mb-2" for="paymentMethod">Sposób płatności:</label>
+									<select class="form-select form-select-sm mb-3" aria-label="sposob platnosci" name="paymentMethod" id="paymentMethod">
+										<option value="remuneration">Gotówka</option>
+										<option value="interest">Karta debetowa</option>
+										<option value="allegro">Karta kredytowa</option>
+									</select>
+									<label class="p-input-radio mb-2" for="paymentCategory">Kategoria płatności: </label>
+									<select class="form-select form-select-sm" aria-label="sposob platnosci" name="paymentCategory" id="paymentCategory">
+										<option value="remuneration">Jedzenie</option>
+										<option value="interest">Mieszkanie</option>
+										<option value="allegro">Transport</option>
+										<option value="allegro">Telekomunikacja</option>
+										<option value="allegro">Opieka zdrowotna</option>
+										<option value="allegro">Ubranie</option>
+										<option value="allegro">Higiena</option>
+										<option value="allegro">Dzieci</option>
+										<option value="allegro">Rozrywka</option>
+										<option value="allegro">Wycieczka</option>
+										<option value="allegro">Szkolenia</option>
+										<option value="allegro">Książki</option>
+										<option value="allegro">Oszczędności</option>
+										<option value="allegro">Na złotą jesień, czyli emeryturę</option>
+										<option value="allegro">Spłata długów</option>
+										<option value="allegro">Darowizna</option>
+										<option value="allegro">Inne</option>
+									</select>
+									<div class="mt-3 mb-3">
+										<label for="comment" class="form-label">Komentarz (opcjonalnie):</label>
+										<textarea class="form-control" id="comment" rows="2"></textarea>
+									</div>
+									<div class="mt-4 submit">
+										<button type="submit" class="btn btn-warning btn-lg">Dodaj</button>
+									</div>
+								</form>	
+								<form>
+									<div class="mt-4 submit">
+										<button type="button" onclick="document.location='personalBudget.html'" class="btn btn-warning btn-lg">Anuluj</button>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -95,7 +141,7 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="src/script.js"></script>
+	<script src="js/script.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
